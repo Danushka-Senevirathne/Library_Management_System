@@ -31,11 +31,11 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            txtUserName = new TextBox();
+            txtPassword = new TextBox();
+            btnClose = new Button();
+            btnSign = new Button();
+            btnLogin = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -71,68 +71,79 @@
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // txtUserName
             // 
-            textBox1.Location = new Point(123, 127);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(153, 36);
-            textBox1.TabIndex = 3;
+            txtUserName.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUserName.Location = new Point(123, 127);
+            txtUserName.Multiline = true;
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(153, 36);
+            txtUserName.TabIndex = 3;
+            txtUserName.Text = "User Name";
+            txtUserName.MouseEnter += txtUserName_MouseEnter;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(123, 183);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(153, 33);
-            textBox2.TabIndex = 4;
+            txtPassword.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(123, 183);
+            txtPassword.Multiline = true;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(153, 33);
+            txtPassword.TabIndex = 4;
+            txtPassword.Text = "Password";
+            txtPassword.MouseEnter += txtPassword_MouseEnter;
             // 
-            // button1
+            // btnClose
             // 
-            button1.BackColor = Color.White;
-            button1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Red;
-            button1.Location = new Point(286, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(28, 28);
-            button1.TabIndex = 5;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = false;
+            btnClose.BackColor = Color.White;
+            btnClose.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClose.ForeColor = Color.Red;
+            btnClose.Location = new Point(286, 12);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(28, 28);
+            btnClose.TabIndex = 5;
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
-            // button2
+            // btnSign
             // 
-            button2.BackColor = Color.FromArgb(0, 192, 0);
-            button2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(54, 242);
-            button2.Name = "button2";
-            button2.Size = new Size(101, 44);
-            button2.TabIndex = 6;
-            button2.Text = "Sign";
-            button2.UseVisualStyleBackColor = false;
+            btnSign.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSign.BackColor = Color.FromArgb(0, 192, 0);
+            btnSign.Cursor = Cursors.Hand;
+            btnSign.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSign.ForeColor = Color.White;
+            btnSign.Location = new Point(54, 242);
+            btnSign.Name = "btnSign";
+            btnSign.Size = new Size(101, 44);
+            btnSign.TabIndex = 6;
+            btnSign.Text = "Sign";
+            btnSign.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnLogin
             // 
-            button3.BackColor = Color.FromArgb(0, 192, 192);
-            button3.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(175, 242);
-            button3.Name = "button3";
-            button3.Size = new Size(101, 44);
-            button3.TabIndex = 7;
-            button3.Text = "Login";
-            button3.UseVisualStyleBackColor = false;
+            btnLogin.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnLogin.BackColor = Color.FromArgb(0, 192, 192);
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(175, 242);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(101, 44);
+            btnLogin.TabIndex = 7;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(326, 325);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnLogin);
+            Controls.Add(btnSign);
+            Controls.Add(btnClose);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUserName);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -152,10 +163,10 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private TextBox txtUserName;
+        private TextBox txtPassword;
+        private Button btnClose;
+        private Button btnSign;
+        private Button btnLogin;
     }
 }
