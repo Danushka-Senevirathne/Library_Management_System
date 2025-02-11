@@ -177,6 +177,7 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(288, 23);
             txtName.TabIndex = 8;
+            txtName.TextChanged += txtName_TextChanged;
             // 
             // txtAuthor
             // 

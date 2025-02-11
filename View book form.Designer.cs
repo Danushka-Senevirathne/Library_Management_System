@@ -38,9 +38,9 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            btnClear = new Button();
             txtBQuantity = new TextBox();
             txtBPrice = new TextBox();
             txtBDate = new TextBox();
@@ -50,7 +50,7 @@
             dataGridView1 = new DataGridView();
             panel3 = new Panel();
             label9 = new Label();
-            textBox1 = new TextBox();
+            txtNameSearch = new TextBox();
             btnRefresh = new Button();
             label2 = new Label();
             panel1.SuspendLayout();
@@ -100,9 +100,9 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnUpdate);
+            panel2.Controls.Add(btnDelete);
+            panel2.Controls.Add(btnClear);
             panel2.Controls.Add(txtBQuantity);
             panel2.Controls.Add(txtBPrice);
             panel2.Controls.Add(txtBDate);
@@ -181,47 +181,50 @@
             label3.TabIndex = 3;
             label3.Text = "Book Name";
             // 
-            // button4
+            // btnUpdate
             // 
-            button4.BackColor = Color.IndianRed;
-            button4.Cursor = Cursors.Hand;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Calibri", 12F);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(34, 418);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 34);
-            button4.TabIndex = 7;
-            button4.Text = "Upadate";
-            button4.UseVisualStyleBackColor = false;
+            btnUpdate.BackColor = Color.IndianRed;
+            btnUpdate.Cursor = Cursors.Hand;
+            btnUpdate.FlatStyle = FlatStyle.Popup;
+            btnUpdate.Font = new Font("Calibri", 12F);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(34, 418);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 34);
+            btnUpdate.TabIndex = 7;
+            btnUpdate.Text = "Upadate";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // button3
+            // btnDelete
             // 
-            button3.BackColor = Color.IndianRed;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Calibri", 12F);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(156, 418);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 34);
-            button3.TabIndex = 6;
-            button3.Text = "Delete";
-            button3.UseVisualStyleBackColor = false;
+            btnDelete.BackColor = Color.IndianRed;
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.FlatStyle = FlatStyle.Popup;
+            btnDelete.Font = new Font("Calibri", 12F);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(156, 418);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 34);
+            btnDelete.TabIndex = 6;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // button2
+            // btnClear
             // 
-            button2.BackColor = Color.IndianRed;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Calibri", 12F);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(274, 418);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 34);
-            button2.TabIndex = 3;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = false;
+            btnClear.BackColor = Color.IndianRed;
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatStyle = FlatStyle.Popup;
+            btnClear.Font = new Font("Calibri", 12F);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(274, 418);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 34);
+            btnClear.TabIndex = 3;
+            btnClear.Text = "Cancel";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += button2_Click;
             // 
             // txtBQuantity
             // 
@@ -285,7 +288,7 @@
             // 
             panel3.BackColor = Color.LightSalmon;
             panel3.Controls.Add(label9);
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(txtNameSearch);
             panel3.Controls.Add(btnRefresh);
             panel3.Controls.Add(label2);
             panel3.Location = new Point(0, 59);
@@ -304,13 +307,14 @@
             label9.TabIndex = 13;
             label9.Text = "Book Name";
             // 
-            // textBox1
+            // txtNameSearch
             // 
-            textBox1.Location = new Point(238, 18);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 35);
-            textBox1.TabIndex = 2;
+            txtNameSearch.Location = new Point(238, 18);
+            txtNameSearch.Multiline = true;
+            txtNameSearch.Name = "txtNameSearch";
+            txtNameSearch.Size = new Size(262, 35);
+            txtNameSearch.TabIndex = 2;
+            txtNameSearch.TextChanged += txtNameSearch_TextChanged;
             // 
             // btnRefresh
             // 
@@ -325,6 +329,7 @@
             btnRefresh.TabIndex = 1;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click_1;
             // 
             // label2
             // 
@@ -369,16 +374,16 @@
         private DataGridView dataGridView1;
         private Panel panel3;
         private TextBox txtBName;
-        private TextBox textBox1;
+        private TextBox txtNameSearch;
         private Button btnRefresh;
         private Label label2;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private Button btnClear;
         private TextBox txtBQuantity;
         private TextBox txtBPrice;
         private TextBox txtBDate;
