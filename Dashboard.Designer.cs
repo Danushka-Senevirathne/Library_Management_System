@@ -77,6 +77,7 @@
             viewBooksToolStripMenuItem.Name = "viewBooksToolStripMenuItem";
             viewBooksToolStripMenuItem.Size = new Size(180, 24);
             viewBooksToolStripMenuItem.Text = "View Books";
+            viewBooksToolStripMenuItem.Click += viewBooksToolStripMenuItem_Click;
             // 
             // studentsToolStripMenuItem
             // 

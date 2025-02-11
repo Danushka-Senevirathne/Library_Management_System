@@ -35,5 +35,11 @@ namespace Library_Management_System
             Add_Books_Form abf = new Add_Books_Form();
             abf.Show();
         }
+
+        private void viewBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View_book_form vbf = new View_book_form();
+            vbf.Show();
+        }
     }
 }
