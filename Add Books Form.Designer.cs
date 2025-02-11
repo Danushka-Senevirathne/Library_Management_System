@@ -39,14 +39,14 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtName = new TextBox();
+            txtAuthor = new TextBox();
+            txtPublicator = new TextBox();
+            txtPrice = new TextBox();
+            txtQuantity = new TextBox();
             dateTimePicker1 = new DateTimePicker();
-            button1 = new Button();
-            button2 = new Button();
+            btnSave = new Button();
+            btnCancel = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -170,47 +170,47 @@
             label7.TabIndex = 6;
             label7.Text = "Book Price";
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Location = new Point(437, 110);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(288, 23);
-            textBox1.TabIndex = 8;
+            txtName.Location = new Point(437, 110);
+            txtName.Multiline = true;
+            txtName.Name = "txtName";
+            txtName.Size = new Size(288, 23);
+            txtName.TabIndex = 8;
             // 
-            // textBox2
+            // txtAuthor
             // 
-            textBox2.Location = new Point(437, 151);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(288, 23);
-            textBox2.TabIndex = 9;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtAuthor.Location = new Point(437, 151);
+            txtAuthor.Multiline = true;
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(288, 23);
+            txtAuthor.TabIndex = 9;
+            txtAuthor.TextChanged += textBox2_TextChanged;
             // 
-            // textBox3
+            // txtPublicator
             // 
-            textBox3.Location = new Point(437, 195);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(288, 23);
-            textBox3.TabIndex = 10;
+            txtPublicator.Location = new Point(437, 195);
+            txtPublicator.Multiline = true;
+            txtPublicator.Name = "txtPublicator";
+            txtPublicator.Size = new Size(288, 23);
+            txtPublicator.TabIndex = 10;
             // 
-            // textBox4
+            // txtPrice
             // 
-            textBox4.Location = new Point(437, 292);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(288, 23);
-            textBox4.TabIndex = 11;
+            txtPrice.Location = new Point(437, 292);
+            txtPrice.Multiline = true;
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(288, 23);
+            txtPrice.TabIndex = 11;
             // 
-            // textBox5
+            // txtQuantity
             // 
-            textBox5.Location = new Point(437, 336);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(288, 23);
-            textBox5.TabIndex = 12;
-            textBox5.TextChanged += textBox5_TextChanged;
+            txtQuantity.Location = new Point(437, 336);
+            txtQuantity.Multiline = true;
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(288, 23);
+            txtQuantity.TabIndex = 12;
+            txtQuantity.TextChanged += textBox5_TextChanged;
             // 
             // dateTimePicker1
             // 
@@ -219,33 +219,35 @@
             dateTimePicker1.Size = new Size(288, 23);
             dateTimePicker1.TabIndex = 13;
             // 
-            // button1
+            // btnSave
             // 
-            button1.BackColor = Color.DarkSalmon;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(437, 379);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 36);
-            button1.TabIndex = 14;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = false;
+            btnSave.BackColor = Color.DarkSalmon;
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.FlatStyle = FlatStyle.Popup;
+            btnSave.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(437, 379);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(120, 36);
+            btnSave.TabIndex = 14;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
-            // button2
+            // btnCancel
             // 
-            button2.BackColor = Color.DarkSalmon;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(605, 379);
-            button2.Name = "button2";
-            button2.Size = new Size(120, 36);
-            button2.TabIndex = 15;
-            button2.Text = "Cancel\r\n";
-            button2.UseVisualStyleBackColor = false;
+            btnCancel.BackColor = Color.DarkSalmon;
+            btnCancel.Cursor = Cursors.Hand;
+            btnCancel.FlatStyle = FlatStyle.Popup;
+            btnCancel.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(605, 379);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(120, 36);
+            btnCancel.TabIndex = 15;
+            btnCancel.Text = "Cancel\r\n";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // Add_Books_Form
             // 
@@ -253,14 +255,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(754, 441);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
             Controls.Add(dateTimePicker1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtQuantity);
+            Controls.Add(txtPrice);
+            Controls.Add(txtPublicator);
+            Controls.Add(txtAuthor);
+            Controls.Add(txtName);
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(label4);
@@ -293,13 +295,13 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtName;
+        private TextBox txtAuthor;
+        private TextBox txtPublicator;
+        private TextBox txtPrice;
+        private TextBox txtQuantity;
         private DateTimePicker dateTimePicker1;
-        private Button button1;
-        private Button button2;
+        private Button btnSave;
+        private Button btnCancel;
     }
 }
