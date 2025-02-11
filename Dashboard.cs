@@ -41,5 +41,11 @@ namespace Library_Management_System
             View_book_form vbf = new View_book_form();
             vbf.Show();
         }
+
+        private void addStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Student_Form asf = new Add_Student_Form();
+            asf.Show();
+        }
     }
 }
