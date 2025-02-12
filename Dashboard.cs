@@ -56,7 +56,7 @@ namespace Library_Management_System
 
         private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Book_Issue_Form bif = new Book_Issue_Form();
+            Book_Issue_Form_Load bif = new Book_Issue_Form_Load();
             bif.Show();
         }
     }

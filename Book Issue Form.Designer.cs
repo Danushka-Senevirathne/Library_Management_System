@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System
 {
-    partial class Book_Issue_Form
+    partial class Book_Issue_Form_Load
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             btnSearch = new Button();
-            textBox1 = new TextBox();
+            txtEnrollNumber = new TextBox();
             label1 = new Label();
             panel2 = new Panel();
             btnIssue = new Button();
@@ -45,13 +45,13 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox1 = new ComboBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            dateTimePicker = new DateTimePicker();
+            comboBoxBooks = new ComboBox();
+            txtMail = new TextBox();
+            txtCon = new TextBox();
+            txtSem = new TextBox();
+            txtDep = new TextBox();
+            txtStdName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -73,7 +73,7 @@
             panel1.BackColor = Color.Salmon;
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(btnSearch);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtEnrollNumber);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(313, -1);
             panel1.Name = "panel1";
@@ -103,17 +103,19 @@
             btnSearch.TabIndex = 3;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
-            // textBox1
+            // txtEnrollNumber
             // 
-            textBox1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.Gray;
-            textBox1.Location = new Point(166, 28);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 33);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "Enrollement No.";
+            txtEnrollNumber.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEnrollNumber.ForeColor = Color.Gray;
+            txtEnrollNumber.Location = new Point(166, 28);
+            txtEnrollNumber.Multiline = true;
+            txtEnrollNumber.Name = "txtEnrollNumber";
+            txtEnrollNumber.Size = new Size(223, 33);
+            txtEnrollNumber.TabIndex = 2;
+            txtEnrollNumber.Text = "Enrollement No.";
+            txtEnrollNumber.MouseHover += txtEnrollNumber_MouseHover;
             // 
             // label1
             // 
@@ -139,13 +141,13 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(dateTimePicker1);
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(dateTimePicker);
+            panel2.Controls.Add(comboBoxBooks);
+            panel2.Controls.Add(txtMail);
+            panel2.Controls.Add(txtCon);
+            panel2.Controls.Add(txtSem);
+            panel2.Controls.Add(txtDep);
+            panel2.Controls.Add(txtStdName);
             panel2.Location = new Point(313, 90);
             panel2.Name = "panel2";
             panel2.Size = new Size(647, 408);
@@ -164,6 +166,7 @@
             btnIssue.TabIndex = 14;
             btnIssue.Text = "Issue";
             btnIssue.UseVisualStyleBackColor = false;
+            btnIssue.Click += btnIssue_Click;
             // 
             // btnRefresh
             // 
@@ -178,6 +181,7 @@
             btnRefresh.TabIndex = 13;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnCancel
             // 
@@ -192,6 +196,7 @@
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // label9
             // 
@@ -263,63 +268,68 @@
             label3.TabIndex = 5;
             label3.Text = "Student Name";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            dateTimePicker1.Location = new Point(166, 302);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(470, 23);
-            dateTimePicker1.TabIndex = 6;
+            dateTimePicker.Location = new Point(166, 302);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(470, 23);
+            dateTimePicker.TabIndex = 6;
             // 
-            // comboBox1
+            // comboBoxBooks
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(166, 260);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(470, 23);
-            comboBox1.TabIndex = 5;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            comboBoxBooks.FormattingEnabled = true;
+            comboBoxBooks.Location = new Point(166, 260);
+            comboBoxBooks.Name = "comboBoxBooks";
+            comboBoxBooks.Size = new Size(470, 23);
+            comboBoxBooks.TabIndex = 5;
+            comboBoxBooks.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // textBox6
+            // txtMail
             // 
-            textBox6.Location = new Point(166, 214);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(470, 28);
-            textBox6.TabIndex = 4;
+            txtMail.Location = new Point(166, 214);
+            txtMail.Multiline = true;
+            txtMail.Name = "txtMail";
+            txtMail.ReadOnly = true;
+            txtMail.Size = new Size(470, 28);
+            txtMail.TabIndex = 4;
             // 
-            // textBox5
+            // txtCon
             // 
-            textBox5.Location = new Point(166, 169);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(470, 28);
-            textBox5.TabIndex = 3;
+            txtCon.Location = new Point(166, 169);
+            txtCon.Multiline = true;
+            txtCon.Name = "txtCon";
+            txtCon.ReadOnly = true;
+            txtCon.Size = new Size(470, 28);
+            txtCon.TabIndex = 3;
             // 
-            // textBox4
+            // txtSem
             // 
-            textBox4.Location = new Point(166, 121);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(470, 28);
-            textBox4.TabIndex = 2;
+            txtSem.Location = new Point(166, 121);
+            txtSem.Multiline = true;
+            txtSem.Name = "txtSem";
+            txtSem.ReadOnly = true;
+            txtSem.Size = new Size(470, 28);
+            txtSem.TabIndex = 2;
             // 
-            // textBox3
+            // txtDep
             // 
-            textBox3.Location = new Point(166, 75);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(470, 28);
-            textBox3.TabIndex = 1;
+            txtDep.Location = new Point(166, 75);
+            txtDep.Multiline = true;
+            txtDep.Name = "txtDep";
+            txtDep.ReadOnly = true;
+            txtDep.Size = new Size(470, 28);
+            txtDep.TabIndex = 1;
             // 
-            // textBox2
+            // txtStdName
             // 
-            textBox2.Location = new Point(166, 29);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(470, 28);
-            textBox2.TabIndex = 0;
+            txtStdName.Location = new Point(166, 29);
+            txtStdName.Multiline = true;
+            txtStdName.Name = "txtStdName";
+            txtStdName.ReadOnly = true;
+            txtStdName.Size = new Size(470, 28);
+            txtStdName.TabIndex = 0;
             // 
-            // Book_Issue_Form
+            // Book_Issue_Form_Load
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -327,9 +337,10 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
-            Name = "Book_Issue_Form";
+            Name = "Book_Issue_Form_Load";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Book_Issue_Form";
+            Load += Book_Issue_Form_Load_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -346,15 +357,15 @@
         private Panel panel2;
         private PictureBox pictureBox2;
         private Button btnSearch;
-        private TextBox textBox1;
+        private TextBox txtEnrollNumber;
         private Label label1;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
+        private TextBox txtMail;
+        private TextBox txtCon;
+        private TextBox txtSem;
+        private TextBox txtDep;
+        private TextBox txtStdName;
+        private DateTimePicker dateTimePicker;
+        private ComboBox comboBoxBooks;
         private Button btnIssue;
         private Button btnRefresh;
         private Button btnCancel;
