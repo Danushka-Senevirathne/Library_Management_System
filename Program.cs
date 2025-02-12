@@ -11,7 +11,7 @@ namespace Library_Management_System
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Dashboard()); // changed Form 1 to dashboard. because I need to run dashboard 1st.
+            Application.Run(new Form1()); // changed Form 1 to dashboard. because I need to run dashboard 1st.
         }
     }
 }

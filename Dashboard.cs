@@ -65,5 +65,11 @@ namespace Library_Management_System
             Book_Return_Form brf = new Book_Return_Form();
             brf.Show();
         }
+
+        private void completeBookDatailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Complete_Book_Datails_Form cbdf = new Complete_Book_Datails_Form();
+            cbdf.Show();    
+        }
     }
 }

@@ -125,6 +125,7 @@
             completeBookDatailsToolStripMenuItem.Name = "completeBookDatailsToolStripMenuItem";
             completeBookDatailsToolStripMenuItem.Size = new Size(185, 55);
             completeBookDatailsToolStripMenuItem.Text = "Complete Book Datails";
+            completeBookDatailsToolStripMenuItem.Click += completeBookDatailsToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
