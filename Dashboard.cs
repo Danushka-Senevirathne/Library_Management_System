@@ -53,5 +53,23 @@ namespace Library_Management_System
             View_Student_Form_Load vsf = new View_Student_Form_Load();
             vsf.Show();
         }
+
+        private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Book_Issue_Form_Load bif = new Book_Issue_Form_Load();
+            bif.Show();
+        }
+
+        private void returnBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Book_Return_Form brf = new Book_Return_Form();
+            brf.Show();
+        }
+
+        private void completeBookDatailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Complete_Book_Datails_Form cbdf = new Complete_Book_Datails_Form();
+            cbdf.Show();    
+        }
     }
 }

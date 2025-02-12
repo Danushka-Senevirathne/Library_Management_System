@@ -103,6 +103,16 @@ namespace Library_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_gif_3 {
+            get {
+                object obj = ResourceManager.GetObject("book gif 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_issue {
             get {
                 object obj = ResourceManager.GetObject("book issue", resourceCulture);
@@ -156,6 +166,26 @@ namespace Library_Management_System.Properties {
         internal static System.Drawing.Bitmap library {
             get {
                 object obj = ResourceManager.GetObject("library", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap library_1 {
+            get {
+                object obj = ResourceManager.GetObject("library 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap library_2 {
+            get {
+                object obj = ResourceManager.GetObject("library 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

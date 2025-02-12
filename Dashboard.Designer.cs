@@ -108,6 +108,7 @@
             issueBooksToolStripMenuItem.Name = "issueBooksToolStripMenuItem";
             issueBooksToolStripMenuItem.Size = new Size(114, 55);
             issueBooksToolStripMenuItem.Text = "Issue Books";
+            issueBooksToolStripMenuItem.Click += issueBooksToolStripMenuItem_Click;
             // 
             // returnBooksToolStripMenuItem
             // 
@@ -115,6 +116,7 @@
             returnBooksToolStripMenuItem.Name = "returnBooksToolStripMenuItem";
             returnBooksToolStripMenuItem.Size = new Size(123, 55);
             returnBooksToolStripMenuItem.Text = "Return Books";
+            returnBooksToolStripMenuItem.Click += returnBooksToolStripMenuItem_Click;
             // 
             // completeBookDatailsToolStripMenuItem
             // 
@@ -123,6 +125,7 @@
             completeBookDatailsToolStripMenuItem.Name = "completeBookDatailsToolStripMenuItem";
             completeBookDatailsToolStripMenuItem.Size = new Size(185, 55);
             completeBookDatailsToolStripMenuItem.Text = "Complete Book Datails";
+            completeBookDatailsToolStripMenuItem.Click += completeBookDatailsToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
