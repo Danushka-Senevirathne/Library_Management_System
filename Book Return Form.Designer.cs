@@ -187,6 +187,7 @@
             btnCancel.TabIndex = 4;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnRefresh
             // 
@@ -201,6 +202,7 @@
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnReturn
             // 
@@ -215,6 +217,7 @@
             btnReturn.TabIndex = 2;
             btnReturn.Text = "Return";
             btnReturn.UseVisualStyleBackColor = false;
+            btnReturn.Click += btnReturn_Click;
             // 
             // txtBookName
             // 
@@ -244,6 +247,7 @@
             dataGridViewTable.ReadOnly = true;
             dataGridViewTable.Size = new Size(770, 197);
             dataGridViewTable.TabIndex = 3;
+            dataGridViewTable.CellClick += dataGridViewTable_CellClick;
             // 
             // Book_Return_Form
             // 
