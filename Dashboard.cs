@@ -59,5 +59,11 @@ namespace Library_Management_System
             Book_Issue_Form_Load bif = new Book_Issue_Form_Load();
             bif.Show();
         }
+
+        private void returnBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Book_Return_Form brf = new Book_Return_Form();
+            brf.Show();
+        }
     }
 }
